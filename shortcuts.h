@@ -19,6 +19,8 @@ This header file includes :
 
 using namespace std;
 
+
+// Uses Sieve of Eratosthenes and has O(N log (log N)) complexity with O(n) auxilary space.
 bool check_Prime(lli n)
 {
     vector<bool> isPrime(n + 1, true);
