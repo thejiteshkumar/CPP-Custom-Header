@@ -22,6 +22,7 @@ Just include this header file
 - [Check Large Prime Numbers](#Check-Large-Prime-number)
 - [Factorial of a large Number](#Factorial-of-a-large-number)
 - [Nth Fibonacci Number](#Nth-Fibonacci-Number)
+- [Check Palindrome](#Check-Palindrome)
 
 
 
@@ -64,6 +65,15 @@ The various Functions included are:
     Returns nth fibonacci in "long long int" type.
 
     USE: long long int fib = nthFibonacci(variables);
+
+## Check Palindrome
+    This function returns results in O(length of number).
+    Convert the given integer into a string before passing.
+    For that use "to_string()" function.
+
+    Returns a "boolean" results.
+
+    USE: bool palindrome = checkPalindrome(string num);
 
 
 
