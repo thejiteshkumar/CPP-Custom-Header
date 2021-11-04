@@ -1,7 +1,7 @@
 
 # CPP Custom Header
 
-This header file main purpose is to implement most famous and most used alorithms that are easy to implement but quite lengthy and time consuming in coding competitions.
+This header file main purpose is to implement most famous and most used algorithm that are easy to implement but quite lengthy and time consuming in coding competitions.
 
 
 
