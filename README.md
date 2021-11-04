@@ -33,15 +33,13 @@ The various Functions included are:
 
     Sieve of Eratosthenes is used.
     
-    ```bash
+    
     check_Prime(variable)
-    ```
 ## Check Large Prime number
 
     This function works on a large prime numbers.
 
     Use long long or long long int 
 
-    ```bash
-        check_LargePrime(variable)
-    ```
+
+    check_LargePrime(variable)
