@@ -18,8 +18,8 @@ Just include this header file
     
 ## Content
 
-- [Check Prime Numbers](##Check-Prime)
-- [Check Large Prime Numbers](##Check-Large-Prime-number)
+- [Check Prime Numbers](#Check-Prime)
+- [Check Large Prime Numbers](#Check-Large-Prime-number)
 
 
 
