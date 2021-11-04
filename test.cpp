@@ -15,7 +15,7 @@ int main()
 {
     fastio
 
-        if (check_LargePrime(7847777799997777555555))
+        if (check_Prime(78477777))
             cout<< "PRIME";
         else 
         cout << "NOT PRIME";
