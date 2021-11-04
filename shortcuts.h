@@ -7,6 +7,7 @@ This header file includes :
     2. Large Prime Number Check
     3. Factorial of Large Number
     4. Nth Fibonacci Number
+    5. Check Palindrome
 
 
 
@@ -27,6 +28,13 @@ using namespace std;
 
 // Uses Sieve of Eratosthenes and has O(N log (log N)) complexity with O(n) auxilary space.
 
+/**
+ * @brief Prime Numbers have only 1 and themselves as factors.
+ * Sieve of Eratosthenes is used here to check prime
+ * 
+ * @param int number
+ * @return true or false  
+ */
 bool check_Prime(lli n)
 {
     vector<bool> isPrime(n + 1, true);
@@ -46,6 +54,12 @@ bool check_Prime(lli n)
     return isPrime[n];
 }
 
+/**
+ * @brief  Prime Numbers have only 1 and themselves as factors.
+ * This function checks prime number for large integer value.
+ * @param long_long_int number 
+ * @return true or false 
+ */
 bool check_LargePrime(lli n)
 {
     if (n == 0 || n == 1)
@@ -94,6 +108,13 @@ public:
     }
 };
 
+/**
+ * @brief Factorial of a non-negative number is product of all number upto that number
+ * For Example: 6! = 1*2*3*4*5*6  = 720.vector<int> ans = factorialOfLargeNumber(int number);
+ * 
+ * @param int number 
+ * @return vector<int> since the result is so large it will cause overflow, 
+ */
 vector<int> factorialOfLargeNumber(int n){
 
     Factorial obj;
@@ -108,7 +129,12 @@ vector<int> factorialOfLargeNumber(int n){
 
 // time complexity O(n) and space as O(1) 
 // works great till n<1000
-
+/**
+ * @brief Fibonacci Series Fn = Fn-1 + Fn-2. Some fibonacci sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,…….
+ * 
+ * @param long_long_int n 
+ * @return long long int nth Fibonacci Number 
+ */
 lli nthFibonacci(lli n){
     lli a = 0, b = 1, c;
 
@@ -121,7 +147,25 @@ lli nthFibonacci(lli n){
     }
     return b;
 }
+//==============================================================================================
 
+//Check Palindrome Number (original == reverse)
+/**
+ * @brief A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward.
+ * 
+ * @param string num  
+ * @return True or false 
+ */
+bool checkPalindrome(string num){
+
+    lli len = num.size();
+
+    for (lli i = 0; i < len / 2;i++){
+        if(num[i]!=num[len-i-1])
+            return false;
+    }
+    return true;
+}
 
 
 
