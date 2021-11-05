@@ -1,17 +1,20 @@
 /* 
 
-This header file main purpose is to implement most famous and most used alorithms that are easy to implement but quite lengthy and time consuming in coding competitions.
+This library file main purpose is to implement most famous and most used alorithms that are easy to implement but quite lengthy and time consuming in coding competitions.
 
 This header file includes :
-    1. Prime Number Check 
-    2. Large Prime Number Check
-    3. Factorial of Large Number
-    4. Nth Fibonacci Number
-    5. Check Palindrome
+    MATHS:
+    - Prime Number Check 
+    - Large Prime Number Check
+    - Prime Numbers between two Numbers
+    - Factorial of Large Number
+    - Nth Fibonacci Number
+    - Check Palindrome
 
 
 
     NOTICE : This is still in development phase and more algorithms will be added ASAP.
+             This header file is built with the help of STL and basic knowledge of STL is required to use this library.
 
     Author : JITESH KUMAR
 
@@ -25,9 +28,25 @@ using namespace std;
 
 //=============================================================================================
 
-
 // Uses Sieve of Eratosthenes and has O(N log (log N)) complexity with O(n) auxilary space.
+template <typename S>
+vector<bool> sieve(S n)
+{
+    vector<bool> isPrime(n + 1, true);
+    isPrime[0] = isPrime[1] = false;
 
+    for (S i = 2; i * i <= n; i++)
+    {
+        if (isPrime[i])
+        {
+            for (S j = i * i; j <= n; j += i)
+            {
+                isPrime[j] = false;
+            }
+        }
+    }
+    return isPrime;
+}
 /**
  * @brief Prime Numbers have only 1 and themselves as factors.
  * Sieve of Eratosthenes is used here to check prime
@@ -35,23 +54,36 @@ using namespace std;
  * @param int number
  * @return true or false  
  */
-bool check_Prime(lli n)
+template <typename TT>
+bool check_Prime(TT n)
 {
-    vector<bool> isPrime(n + 1, true);
-    isPrime[0] = isPrime[1] = false;
 
-    for (int i = 2; i * i <= n; i++)
+    vector<bool> isPrime = sieve(n);
+    return isPrime[n];
+}
+
+/**
+ * @brief This function returns prime numbers between two given numbers in a vector
+ * 
+ * @tparam T 
+ * @param a 
+ * @param b 
+ * @return vector<T>   
+ */
+template <typename T>
+vector<T> primeInBetween(T a, T b)
+{
+    vector<bool> isPrime = sieve(b);
+
+    vector<T> ans;
+
+    for (int i = 0; i < b + 1; i++)
     {
         if (isPrime[i])
-        {
-            for (int j = i * i; j <= n; j += i)
-            {
-                isPrime[j] = false;
-            }
-        }
+            ans.push_back(i);
     }
 
-    return isPrime[n];
+    return ans;
 }
 
 /**
@@ -60,7 +92,8 @@ bool check_Prime(lli n)
  * @param long_long_int number 
  * @return true or false 
  */
-bool check_LargePrime(lli n)
+template <typename T>
+bool check_LargePrime(T n)
 {
     if (n == 0 || n == 1)
         return false;
@@ -77,7 +110,6 @@ bool check_LargePrime(lli n)
 }
 
 //=============================================================================================
-
 
 // Class containing all factorial related problems
 class Factorial
@@ -115,7 +147,8 @@ public:
  * @param int number 
  * @return vector<int> since the result is so large it will cause overflow, 
  */
-vector<int> factorialOfLargeNumber(int n){
+vector<int> factorialOfLargeNumber(int n)
+{
 
     Factorial obj;
     vector<int> res = obj.factorial(n);
@@ -127,7 +160,7 @@ vector<int> factorialOfLargeNumber(int n){
 
 //nth Fibonacci Number
 
-// time complexity O(n) and space as O(1) 
+// time complexity O(n) and space as O(1)
 // works great till n<1000
 /**
  * @brief Fibonacci Series Fn = Fn-1 + Fn-2. Some fibonacci sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,…….
@@ -135,12 +168,14 @@ vector<int> factorialOfLargeNumber(int n){
  * @param long_long_int n 
  * @return long long int nth Fibonacci Number 
  */
-lli nthFibonacci(lli n){
+lli nthFibonacci(lli n)
+{
     lli a = 0, b = 1, c;
 
-    if(n==0)
+    if (n == 0)
         return a;
-    for (lli i = 2; i <= n;i++){
+    for (lli i = 2; i <= n; i++)
+    {
         c = a + b;
         a = b;
         b = c;
@@ -156,17 +191,15 @@ lli nthFibonacci(lli n){
  * @param string num  
  * @return True or false 
  */
-bool checkPalindrome(string num){
+bool checkPalindrome(string num)
+{
 
     lli len = num.size();
 
-    for (lli i = 0; i < len / 2;i++){
-        if(num[i]!=num[len-i-1])
+    for (lli i = 0; i < len / 2; i++)
+    {
+        if (num[i] != num[len - i - 1])
             return false;
     }
     return true;
 }
-
-
-
-
