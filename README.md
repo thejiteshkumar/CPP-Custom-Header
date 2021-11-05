@@ -20,6 +20,7 @@ Just include this header file
 
 - [Check Prime Numbers](#Check-Prime)
 - [Check Large Prime Numbers](#Check-Large-Prime-number)
+- [Prime Numbers between two Numbers](#Prime-Numbers-between-two-Numbers)
 - [Factorial of a large Number](#Factorial-of-a-large-number)
 - [Nth Fibonacci Number](#Nth-Fibonacci-Number)
 - [Check Palindrome](#Check-Palindrome)
@@ -49,6 +50,16 @@ The various Functions included are:
     Returns a "boolean" result.
 
     USE: bool prime = check_LargePrime(variable);
+
+## Prime Numbers between two Numbers
+
+    This function returns all the prime number between two given numbers.
+
+    The given numbers are not included.
+
+    Returns a "vector" as the results.
+
+    USE: vector<int> ans = primeInBetween(2,10)
 
 ## Factorial of a large number
 
