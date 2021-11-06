@@ -18,15 +18,15 @@ Just include this header file
     
 ## Content
 
-    MATHS:
+MATHS:
 
-    - [Check Prime Numbers](#Check-Prime)
-    - [Check Large Prime Numbers](#Check-Large-Prime-number)
-    - [Prime Numbers between two Numbers](#Prime-Numbers-between-two-Numbers)
-    - [Factorial of a large Number](#Factorial-of-a-large-number)
-    - [Nth Fibonacci Number](#Nth-Fibonacci-Number)
-    - [Check Palindrome](#Check-Palindrome)
-    - [Digital Root](#Digital-Root)
+- [Check Prime Numbers](#Check-Prime)
+- [Check Large Prime Numbers](#Check-Large-Prime-number)
+- [Prime Numbers between two Numbers](#Prime-Numbers-between-two-Numbers)
+- [Factorial of a large Number](#Factorial-of-a-large-number)
+- [Nth Fibonacci Number](#Nth-Fibonacci-Number)
+- [Check Palindrome](#Check-Palindrome)
+- [Digital Root](#Digital-Root)
 
 
 
