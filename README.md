@@ -24,6 +24,7 @@ Just include this header file
 - [Factorial of a large Number](#Factorial-of-a-large-number)
 - [Nth Fibonacci Number](#Nth-Fibonacci-Number)
 - [Check Palindrome](#Check-Palindrome)
+- [Digital Root](#Digital-Root)
 
 
 
@@ -85,6 +86,13 @@ The various Functions included are:
     Returns a "boolean" results.
 
     USE: bool palindrome = checkPalindrome(string num);
+
+## Digital Root
+    This function returns the sum of digit of a number until that number becomes a single digit.
+
+    Returns a single digit as the result.
+
+    USE: int sum = digitalRoot(123);     
 
 
 
