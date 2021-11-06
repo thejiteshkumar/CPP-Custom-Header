@@ -168,13 +168,14 @@ vector<int> factorialOfLargeNumber(int n)
  * @param long_long_int n 
  * @return long long int nth Fibonacci Number 
  */
-lli nthFibonacci(lli n)
+template <typename T>
+T nthFibonacci(T n)
 {
-    lli a = 0, b = 1, c;
+    T a = 0, b = 1, c;
 
     if (n == 0)
         return a;
-    for (lli i = 2; i <= n; i++)
+    for (T i = 2; i <= n; i++)
     {
         c = a + b;
         a = b;
@@ -202,4 +203,24 @@ bool checkPalindrome(string num)
             return false;
     }
     return true;
+}
+
+//=======================================================================================================
+
+//Digital root - Finding sum of digits of a number until sum becomes single digit
+
+/**
+ * @brief This function returns the sum of digit of a number until that number becomes a single digit
+ * 
+ * @tparam D int , long ,long long or long long int
+ * @param n  
+ * @return returns a single digit 
+ */
+template <typename D>
+D digitalRoot(D n){
+
+    if(n==0)
+        return 0;
+
+    return (n % 9 == 0) ? 9 : (n % 9);
 }
