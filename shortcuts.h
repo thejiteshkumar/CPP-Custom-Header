@@ -11,6 +11,9 @@ This header file includes :
     - Nth Fibonacci Number
     - Check Palindrome
 
+    RECURSION
+    -Tower of Hanoi
+
 
 
     NOTICE : This is still in development phase and more algorithms will be added ASAP.
@@ -223,4 +226,29 @@ D digitalRoot(D n){
         return 0;
 
     return (n % 9 == 0) ? 9 : (n % 9);
+}
+
+
+//==========================================================================================
+
+//RECURSION
+
+//Tower of Hanoi
+/**
+ * @brief Tower of Hanoi is a mathematical puzzle where we have three rods and n disks. The objective of the puzzle is to move the entire stack to another rod. Following these rules : 1. Only one disk can e moved at a time.  2. No disk can be placed on top of smaller disk
+ *  
+ * @param n no of disks
+ * @param A from rod 
+ * @param B Aux Rod
+ * @param C To rod
+ */
+template<typename T>
+void TOH(T n,char A ,char B,char C){
+    if(n==1){
+        cout << "Move 1 from " << A << "to " <<C<<endl;
+        return;
+    }
+    TOH(n - 1, A, C, B);
+    cout << "Move " << n << " from " << A << "to " << C << endl;
+    TOH(n - 1, B, A, C);
 }

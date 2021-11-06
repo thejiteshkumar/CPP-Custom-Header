@@ -18,7 +18,7 @@ Just include this header file
     
 ## Content
 
-MATHS:
+Maths:
 
 - [Check Prime Numbers](#Check-Prime)
 - [Check Large Prime Numbers](#Check-Large-Prime-number)
@@ -28,6 +28,10 @@ MATHS:
 - [Check Palindrome](#Check-Palindrome)
 - [Digital Root](#Digital-Root)
 
+
+Recursion:
+
+ -[Tower of Hanoi](#Tower-of-Hanoi)
 
 
 # Documentation
@@ -94,7 +98,18 @@ The various Functions included are:
 
     Returns a single digit as the result.
 
-    USE: int sum = digitalRoot(123);     
+    USE: int sum = digitalRoot(123);
+
+## Tower of Hanoi
+    This function prints all the move required for tower of hanoi puzzle to be solved.
+
+    It is of type void and need four parameter to work:
+        int n = no of disks.
+        char A = from rod.
+        char B = auxiliary rod.
+        char C = to rod
+
+    USE: TOH(5,'A','B','C');             
 
 
 
