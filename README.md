@@ -33,6 +33,12 @@ Recursion:
 
  -[Tower of Hanoi](#Tower-of-Hanoi)
 
+LinkedList:
+
+-[How to use this class](#How-to-use-this-class)
+-[Inserting a Node](#Inserting-a-Node)
+-[Printing the list](#Printing-the-list)
+
 
 # Documentation
 
@@ -109,7 +115,22 @@ The various Functions included are:
         char B = auxiliary rod.
         char C = to rod
 
-    USE: TOH(5,'A','B','C');             
+    USE: TOH(5,'A','B','C'); 
+
+## How to use this class
+    This class can be used just like a datatype.
+    USE: LinkedList list;
+
+## Inserting a Node
+    It insert the node in linked list.
+    Nodes are inserted at the END.
+
+    USE : list.insert(value);
+
+## Printing the list
+    This prints the linked list.
+
+    USE: list.display();                     
 
 
 
