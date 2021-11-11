@@ -31,13 +31,13 @@ Maths:
 
 Recursion:
 
- -[Tower of Hanoi](#Tower-of-Hanoi)
+- [Tower of Hanoi](#Tower-of-Hanoi)
 
 LinkedList:
 
--[How to use this class](#How-to-use-this-class)
--[Inserting a Node](#Inserting-a-Node)
--[Printing the list](#Printing-the-list)
+- [How to use this class](#How-to-use-this-class)
+- [Inserting a Node](#Inserting-a-Node)
+- [Printing the list](#Printing-the-list)
 
 
 # Documentation
