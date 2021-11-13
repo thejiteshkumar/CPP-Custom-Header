@@ -37,8 +37,9 @@ LinkedList:
 
 - [How to use this class](#How-to-use-this-class)
 - [Inserting a Node](#Inserting-a-Node)
-- [Printing the list](#Printing-the-list)
 - [Insert at given position](#Insert-at-given-position)
+- [Printing the list](#Printing-the-list)
+
 
 
 # Documentation
