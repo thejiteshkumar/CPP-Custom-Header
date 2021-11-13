@@ -38,6 +38,7 @@ LinkedList:
 - [How to use this class](#How-to-use-this-class)
 - [Inserting a Node](#Inserting-a-Node)
 - [Printing the list](#Printing-the-list)
+- [Insert at given position](#Insert-at-given-position)
 
 
 # Documentation
@@ -126,11 +127,20 @@ The various Functions included are:
     Nodes are inserted at the END.
 
     USE : list.insert(value);
+    
+## Insert at given position
+    This function insert the given node at a specific position.
+
+    It returns the head node of the modified linked list.
+
+    USE: list.insertAtSpecific(Node* head,int position,int data);     
 
 ## Printing the list
     This prints the linked list.
 
-    USE: list.display();                     
+    USE: list.display();   
+
+                      
 
 
 

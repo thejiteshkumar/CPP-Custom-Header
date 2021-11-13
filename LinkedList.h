@@ -52,7 +52,7 @@ public:
 
     //void insertAtBeginning(int);
     void insertNode(int);
-    //void insertAtSpecific();
+    Node* insertAtSpecific(Node *head,int,int);
     void display();
 };
 
@@ -96,3 +96,29 @@ void LinkedList::display(){
     
 }
 
+/**
+ * @brief This function insert the provided value at a given position in a linked list. 
+ * 
+ * @param head starting point of linked list.
+ * @param pos position to be inserted.
+ * @param data value to be inserted.
+ * @return Node* 
+ */
+Node* LinkedList::insertAtSpecific(Node *head,int pos,int data){
+    Node *temp = new Node(data);
+
+    if(pos==1){
+        temp->next = head;
+        return temp;
+    }
+    Node *curr = head;
+    for (int i = 1; i <= pos - 2 and curr != NULL;i++){
+        curr = curr->next;
+    }
+    if(curr==NULL)
+        return head;
+    temp->next = curr->next;
+    curr->next = temp;
+
+    return head;
+}
