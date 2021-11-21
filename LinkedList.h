@@ -50,7 +50,6 @@ public:
         head = NULL;
     }
 
-    //void insertAtBeginning(int);
     void insertNode(int);
     Node* insertAtSpecific(Node *head,int,int);
     void display();
@@ -60,7 +59,7 @@ public:
 //     Node *temp = new Node(data);
 
 //     temp->next = head;
-// }
+// }b
 
 /**
  * @brief This methods insert the node at the END.

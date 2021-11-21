@@ -14,6 +14,9 @@ This header file includes :
     RECURSION
     -Tower of Hanoi
 
+    GENERAL
+    -Sort Element by frequency
+
 
 
     NOTICE : This is still in development phase and more algorithms will be added ASAP.
@@ -251,4 +254,35 @@ void TOH(T n,char A ,char B,char C){
     TOH(n - 1, A, C, B);
     cout << "Move " << n << " from " << A << "to " << C << endl;
     TOH(n - 1, B, A, C);
+}
+
+// Sort Element by frequency
+
+/**
+ * @brief This Function display or prints the array sorted elements by frequency. i.e The maximum occuring element is printed first and least occuring element is printed last.
+ * 
+ * @param arr 
+ */
+template<typename T , size_t SIZE>
+void sortByFreq( T(&arr)[SIZE]){
+    map<T, T> m;
+
+    vector<pair<T, T>> array;
+
+    for (auto i : arr)
+    {
+        m[i]++;
+    }
+    for (auto x : m)
+    {
+        array.push_back({x.first, x.second});
+    }
+
+    sort(array.begin(), array.end(), [](auto &a, auto &b)
+         { return a.second > b.second; });
+
+    for (auto it : array)
+    {
+        cout << it.first << " " << it.second << endl;
+    }
 }
