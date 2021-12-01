@@ -37,6 +37,7 @@ GENERAL:
 
 - [Sort Element by frequency](#Sort-Element-by-frequency)
 - [Kadane's Algorithm (Largest Sum Contiguous  Subarray)](#Kadane's-Algorithm)
+- [Count pairs with given sum](#Count-pairs-with-given-sum)
 
 LinkedList:
 
@@ -141,6 +142,13 @@ The various Functions included are:
     It returns the maximum contiguous subarray sum as a INT type.
 
     USE: maxSubarraySum(int arr[],int n);
+
+## Count pairs with given sum
+    Given an array of N integers, and an integer K, this function returns the number of pairs of elements in the array whose sum is equal to K.
+
+    INPUT: int arr[] , int n (size of array) , int k (the sum)
+
+    USE: getPairsCount(int arr[], int n, int k)
 
 ## How to use Linked List class
     This class can be used just like a datatype.

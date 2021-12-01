@@ -1,10 +1,10 @@
-/* 
+/*
 
 This library file main purpose is to implement most famous and most used alorithms that are easy to implement but quite lengthy and time consuming in coding competitions.
 
 This header file includes :
     MATHS:
-    - Prime Number Check 
+    - Prime Number Check
     - Large Prime Number Check
     - Prime Numbers between two Numbers
     - Factorial of Large Number
@@ -17,6 +17,7 @@ This header file includes :
     GENERAL
     -Sort Element by frequency
     -Kadane's Algorithm (Largest Sum Contiguous Subarray)
+    -Count pairs with given sum
 
 
 
@@ -309,4 +310,27 @@ int maxSubarraySum(int arr[],int n){
         maxSum = max(maxSum, currSum);
     }
     return maxSum;
+}
+
+// Count pairs with given sum
+
+/**
+ * @brief Given an array of N integers, and an integer K, this returns the number of pairs of elements in the array whose sum is equal to K.
+ *
+ * @param arr the integer array in which the operation is to performed
+ * @param n The length of the arr.
+ * @param k The given sum.
+ * @return int Return the number of pairs whose sum is equal to K. 
+ */
+int getPairsCount(int arr[],int n,int k){
+    unordered_map<int, int> umap;
+    int res = 0;
+    for (int i = 0; i < n;i++){
+        if(umap.find(k-arr[i])!=umap.end()){
+            res += umap[k - arr[i]];
+        }
+        umap[arr[i]]++;
+    }
+
+    return res;
 }
