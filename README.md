@@ -33,6 +33,11 @@ Recursion:
 
 - [Tower of Hanoi](#Tower-of-Hanoi)
 
+GENERAL:
+
+- [Sort Element by frequency](#Sort-Element-by-frequency)
+- [Kadane's Algorithm (Largest Sum Contiguous  Subarray)](#Kadane's-Algorithm)
+
 LinkedList:
 
 - [How to use this class](#How-to-use-this-class)
@@ -119,7 +124,25 @@ The various Functions included are:
 
     USE: TOH(5,'A','B','C'); 
 
-## How to use this class
+## Sort Element by frequency
+    This Function display or prints the array sorted elements by frequency. i.e The maximum occuring element is printed first and least occuring element is printed last.
+
+    USE:  sortByFreq(arr)
+
+## Kadane's-Algorithm
+    This function finds the sum of contiguous subarray within a one-dimensional array that has the largest sum.
+
+    INPUT: 
+            - int arr[] // The array in which the operation should  be performed.
+            - int n // The length of the array.
+
+
+
+    It returns the maximum contiguous subarray sum as a INT type.
+
+    USE: maxSubarraySum(int arr[],int n);
+
+## How to use Linked List class
     This class can be used just like a datatype.
     USE: LinkedList list;
 
