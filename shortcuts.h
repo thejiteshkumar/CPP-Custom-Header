@@ -16,6 +16,7 @@ This header file includes :
 
     GENERAL
     -Sort Element by frequency
+    -Kadane's Algorithm (Largest Sum Contiguous Subarray)
 
 
 
@@ -285,4 +286,27 @@ void sortByFreq( T(&arr)[SIZE]){
     {
         cout << it.first << " " << it.second << endl;
     }
+}
+
+//Largest Sum Contiguous Subarray (Kadane's Algorithm)
+
+/**
+ * @brief This function finds the sum of contiguous subarray within a one-dimensional array that has the largest sum.
+ * 
+ * Also famously know as Kadane's Algorithm.
+ *
+ * @param arr the array of integers 
+ * @param n  size of the array
+ * @return int maximum sum.
+ */
+int maxSubarraySum(int arr[],int n){
+    int maxSum = arr[0]; // assuming that the max sum is the first element
+    int currSum = arr[0];  // the current sum
+
+    for (int i = 0; i < n;i++){
+        currSum = max(currSum + arr[i], arr[i]);
+
+        maxSum = max(maxSum, currSum);
+    }
+    return maxSum;
 }
