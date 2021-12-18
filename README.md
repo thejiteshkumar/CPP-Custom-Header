@@ -38,6 +38,7 @@ GENERAL:
 - [Sort Element by frequency](#Sort-Element-by-frequency)
 - [Kadane's Algorithm (Largest Sum Contiguous  Subarray)](#Kadane's-Algorithm)
 - [Count pairs with given sum](#Count-pairs-with-given-sum)
+- [Trapping Rain Water](#Trapping-Rain-Water)
 
 LinkedList:
 
@@ -149,6 +150,20 @@ The various Functions included are:
     INPUT: int arr[] , int n (size of array) , int k (the sum)
 
     USE: getPairsCount(int arr[], int n, int k)
+
+
+## Trapping Rain Water
+    Given an array arr[] or vector<int> of N non-negative integers representing the height of blocks. If width of each block is 1, compute how much water can be trapped between the blocks during the rainy season.
+
+    Input: A vector of integers(vector<int> vec) , 
+            "n" Total no of elements in vectors.
+
+    Output: A integer value of how much water is trapped inside the blocks.    
+
+    Usage: trappedRainWater(arr,n)
+
+          where arr is "vector<int> arr" and n is "int n"
+
 
 ## How to use Linked List class
     This class can be used just like a datatype.
