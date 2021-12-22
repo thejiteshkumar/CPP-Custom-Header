@@ -216,7 +216,7 @@ int Tribonacci(int n){
         first = second;
         second = third;
         third = temp;
-    }A
+    }
     return temp;
 }
 
