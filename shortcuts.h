@@ -9,6 +9,7 @@ This header file includes :
     - Prime Numbers between two Numbers
     - Factorial of Large Number
     - Nth Fibonacci Number
+- Nth Tribonacci Number
     - Check Palindrome
 
     RECURSION
@@ -192,16 +193,44 @@ T nthFibonacci(T n)
     }
     return b;
 }
-//==============================================================================================
 
-//Check Palindrome Number (original == reverse)
 /**
- * @brief A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward.
- * 
- * @param string num  
- * @return True or false 
+ * @brief Each term is the sum of three previous terms.
+ *
+ * @param n
+ * @return int
  */
-bool checkPalindrome(string num)
+int Tribonacci(int n){
+    if(n==0)
+        return 0;
+    if(n<=2)
+        return 1;
+
+    int first = 0;
+    int second = 1;
+    int third = 1;
+    int temp = 0;
+    for (int i = 3; i <=n; i++)
+    {
+        temp = first + second + third;
+        first = second;
+        second = third;
+        third = temp;
+    }A
+    return temp;
+}
+
+    //==============================================================================================
+
+    // Check Palindrome Number (original == reverse)
+    /**
+     * @brief A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward.
+     *
+     * @param string num
+     * @return True or false
+     */
+    bool
+    checkPalindrome(string num)
 {
 
     lli len = num.size();
