@@ -9,7 +9,7 @@ This header file includes :
     - Prime Numbers between two Numbers
     - Factorial of Large Number
     - Nth Fibonacci Number
-- Nth Tribonacci Number
+    - Nth Tribonacci Number
     - Check Palindrome
 
     RECURSION
@@ -21,6 +21,8 @@ This header file includes :
     -Count pairs with given sum
     -Trapping Rain Water
 
+    Dynamic Programming
+    -Selling Wines Problem
 
 
     NOTICE : This is still in development phase and more algorithms will be added ASAP.
@@ -60,9 +62,9 @@ vector<bool> sieve(S n)
 /**
  * @brief Prime Numbers have only 1 and themselves as factors.
  * Sieve of Eratosthenes is used here to check prime
- * 
+ *
  * @param int number
- * @return true or false  
+ * @return true or false
  */
 template <typename TT>
 bool check_Prime(TT n)
@@ -74,11 +76,11 @@ bool check_Prime(TT n)
 
 /**
  * @brief This function returns prime numbers between two given numbers in a vector
- * 
- * @tparam T 
- * @param a 
- * @param b 
- * @return vector<T>   
+ *
+ * @tparam T
+ * @param a
+ * @param b
+ * @return vector<T>
  */
 template <typename T>
 vector<T> primeInBetween(T a, T b)
@@ -99,8 +101,8 @@ vector<T> primeInBetween(T a, T b)
 /**
  * @brief  Prime Numbers have only 1 and themselves as factors.
  * This function checks prime number for large integer value.
- * @param long_long_int number 
- * @return true or false 
+ * @param long_long_int number
+ * @return true or false
  */
 template <typename T>
 bool check_LargePrime(T n)
@@ -153,9 +155,9 @@ public:
 /**
  * @brief Factorial of a non-negative number is product of all number upto that number
  * For Example: 6! = 1*2*3*4*5*6  = 720.vector<int> ans = factorialOfLargeNumber(int number);
- * 
- * @param int number 
- * @return vector<int> since the result is so large it will cause overflow, 
+ *
+ * @param int number
+ * @return vector<int> since the result is so large it will cause overflow,
  */
 vector<int> factorialOfLargeNumber(int n)
 {
@@ -168,15 +170,15 @@ vector<int> factorialOfLargeNumber(int n)
 
 //====================================================================================
 
-//nth Fibonacci Number
+// nth Fibonacci Number
 
 // time complexity O(n) and space as O(1)
 // works great till n<1000
 /**
  * @brief Fibonacci Series Fn = Fn-1 + Fn-2. Some fibonacci sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,…….
- * 
- * @param long_long_int n 
- * @return long long int nth Fibonacci Number 
+ *
+ * @param long_long_int n
+ * @return long long int nth Fibonacci Number
  */
 template <typename T>
 T nthFibonacci(T n)
@@ -200,17 +202,18 @@ T nthFibonacci(T n)
  * @param n
  * @return int
  */
-int Tribonacci(int n){
-    if(n==0)
+int Tribonacci(int n)
+{
+    if (n == 0)
         return 0;
-    if(n<=2)
+    if (n <= 2)
         return 1;
 
     int first = 0;
     int second = 1;
     int third = 1;
     int temp = 0;
-    for (int i = 3; i <=n; i++)
+    for (int i = 3; i <= n; i++)
     {
         temp = first + second + third;
         first = second;
@@ -220,17 +223,16 @@ int Tribonacci(int n){
     return temp;
 }
 
-    //==============================================================================================
+//==============================================================================================
 
-    // Check Palindrome Number (original == reverse)
-    /**
-     * @brief A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward.
-     *
-     * @param string num
-     * @return True or false
-     */
-    bool
-    checkPalindrome(string num)
+// Check Palindrome Number (original == reverse)
+/**
+ * @brief A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward.
+ *
+ * @param string num
+ * @return True or false
+ */
+bool checkPalindrome(string num)
 {
 
     lli len = num.size();
@@ -245,42 +247,44 @@ int Tribonacci(int n){
 
 //=======================================================================================================
 
-//Digital root - Finding sum of digits of a number until sum becomes single digit
+// Digital root - Finding sum of digits of a number until sum becomes single digit
 
 /**
  * @brief This function returns the sum of digit of a number until that number becomes a single digit
- * 
+ *
  * @tparam D int , long ,long long or long long int
- * @param n  
- * @return returns a single digit 
+ * @param n
+ * @return returns a single digit
  */
 template <typename D>
-D digitalRoot(D n){
+D digitalRoot(D n)
+{
 
-    if(n==0)
+    if (n == 0)
         return 0;
 
     return (n % 9 == 0) ? 9 : (n % 9);
 }
 
-
 //==========================================================================================
 
-//RECURSION
+// RECURSION
 
-//Tower of Hanoi
+// Tower of Hanoi
 /**
  * @brief Tower of Hanoi is a mathematical puzzle where we have three rods and n disks. The objective of the puzzle is to move the entire stack to another rod. Following these rules : 1. Only one disk can e moved at a time.  2. No disk can be placed on top of smaller disk
- *  
+ *
  * @param n no of disks
- * @param A from rod 
+ * @param A from rod
  * @param B Aux Rod
  * @param C To rod
  */
-template<typename T>
-void TOH(T n,char A ,char B,char C){
-    if(n==1){
-        cout << "Move 1 from " << A << "to " <<C<<endl;
+template <typename T>
+void TOH(T n, char A, char B, char C)
+{
+    if (n == 1)
+    {
+        cout << "Move 1 from " << A << "to " << C << endl;
         return;
     }
     TOH(n - 1, A, C, B);
@@ -292,11 +296,12 @@ void TOH(T n,char A ,char B,char C){
 
 /**
  * @brief This Function display or prints the array sorted elements by frequency. i.e The maximum occuring element is printed first and least occuring element is printed last.
- * 
- * @param arr 
+ *
+ * @param arr
  */
-template<typename T , size_t SIZE>
-void sortByFreq( T(&arr)[SIZE]){
+template <typename T, size_t SIZE>
+void sortByFreq(T (&arr)[SIZE])
+{
     map<T, T> m;
 
     vector<pair<T, T>> array;
@@ -319,22 +324,24 @@ void sortByFreq( T(&arr)[SIZE]){
     }
 }
 
-//Largest Sum Contiguous Subarray (Kadane's Algorithm)
+// Largest Sum Contiguous Subarray (Kadane's Algorithm)
 
 /**
  * @brief This function finds the sum of contiguous subarray within a one-dimensional array that has the largest sum.
- * 
+ *
  * Also famously know as Kadane's Algorithm.
  *
- * @param arr the array of integers 
+ * @param arr the array of integers
  * @param n  size of the array
  * @return int maximum sum.
  */
-int maxSubarraySum(int arr[],int n){
-    int maxSum = arr[0]; // assuming that the max sum is the first element
-    int currSum = arr[0];  // the current sum
+int maxSubarraySum(int arr[], int n)
+{
+    int maxSum = arr[0];  // assuming that the max sum is the first element
+    int currSum = arr[0]; // the current sum
 
-    for (int i = 0; i < n;i++){
+    for (int i = 0; i < n; i++)
+    {
         currSum = max(currSum + arr[i], arr[i]);
 
         maxSum = max(maxSum, currSum);
@@ -350,13 +357,16 @@ int maxSubarraySum(int arr[],int n){
  * @param arr the integer array in which the operation is to performed
  * @param n The length of the arr.
  * @param k The given sum.
- * @return int Return the number of pairs whose sum is equal to K. 
+ * @return int Return the number of pairs whose sum is equal to K.
  */
-int getPairsCount(int arr[],int n,int k){
+int getPairsCount(int arr[], int n, int k)
+{
     unordered_map<int, int> umap;
     int res = 0;
-    for (int i = 0; i < n;i++){
-        if(umap.find(k-arr[i])!=umap.end()){
+    for (int i = 0; i < n; i++)
+    {
+        if (umap.find(k - arr[i]) != umap.end())
+        {
             res += umap[k - arr[i]];
         }
         umap[arr[i]]++;
@@ -368,14 +378,15 @@ int getPairsCount(int arr[],int n,int k){
 // Trapping Rain Water Problem
 
 /**
- * @brief Given an array arr[] of N non-negative integers representing the height of blocks. If width of each block is 1, compute how much water can be trapped between the blocks during the rainy season. 
+ * @brief Given an array arr[] of N non-negative integers representing the height of blocks. If width of each block is 1, compute how much water can be trapped between the blocks during the rainy season.
  *
- * @param Vector 
- * @param n No of element 
+ * @param Vector
+ * @param n No of element
  * @return int how much rain water is trapped inside
  */
-int trappedRainWater(vector<int> arr,int n){
-    int res =0;
+int trappedRainWater(vector<int> arr, int n)
+{
+    int res = 0;
     int lmax[n], rmax[n];
 
     lmax[0] = arr[0];
@@ -394,5 +405,35 @@ int trappedRainWater(vector<int> arr,int n){
         res += min(lmax[i], rmax[i]) - arr[i];
     }
     return res;
+}
+
+
+
+// Dynamic Programming
+
+// 1. Selling Wines Problem
+
+/**
+ * @brief Given n wines in a row, with integers denoting the cost of each wine respectively. Each year you can sale the first or the last wine in the row. Let the initial profits from the wines be P1, P2, P3…Pn. On the Yth year, the profit from the ith wine will be Y*P[i], calculate the maximum profit from all the wines.
+ *
+ * @param wines The array in which price of the wines is given
+ * @param i The start of wines array i.e The first cornor at which wines can be sold
+ * @param j The end of wines array i.e The second cornor at which wines can be sold
+ * @param y The year at which the wines is sold its initial value will be zero and then increase
+ * @return maxProfit i.e the maximum profit obtained
+ */
+
+int maxProfitFromSellingWine(vector<int> wines,int i,int j,int y){
+
+    // when i is greater than j it means that all wines are already sold so return 0
+    if(i>j)
+        return 0;
+
+    // Choosing the wines from start of the wines array
+    int op1 = wines[i] * y + maxProfitFromSellingWine(wines, i + 1, j, y + 1);
+    // Choosing the wines from the end of the array
+    int op2 = wines[j] * y + maxProfitFromSellingWine(wines, i, j - 1, y + 1);
+
+    return max(op1, op2);
 }
 

@@ -40,6 +40,10 @@ GENERAL:
 - [Count pairs with given sum](#Count-pairs-with-given-sum)
 - [Trapping Rain Water](#Trapping-Rain-Water)
 
+Dynamic Programming:
+
+- [Selling Wines Problem](#Selling-Wines-Problem)
+
 LinkedList:
 
 - [How to use this class](#How-to-use-this-class)
@@ -163,6 +167,19 @@ The various Functions included are:
     Usage: trappedRainWater(arr,n)
 
           where arr is "vector<int> arr" and n is "int n"
+
+
+## Dynamic Programming:
+## Selling Wines Problem
+    Given n wines in a row, with integers denoting the cost of each wine respectively. Each year you can sale the first or the last wine in the row. Let the initial profits from the wines be P1, P2, P3…Pn. On the Yth year, the profit from the ith wine will be Y*P[i], calculate the maximum profit from all the wines.
+
+    Input: Wines vector , start of the array , end of the array and current year.
+
+    Output: Maximum profit in integer format.
+
+    Usage: maxProfitFromSellingWine(vector<int> wines,int i,int j,int y)
+
+    Here, y=1 should be given as it will mark the starting the of the year , y will increase as the we iterate through the array.
 
 
 ## How to use Linked List class
