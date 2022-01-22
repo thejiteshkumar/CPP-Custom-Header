@@ -23,6 +23,7 @@ This header file includes :
 
     Dynamic Programming
     -Selling Wines Problem
+    -Rod Cutting Problem
 
 
     NOTICE : This is still in development phase and more algorithms will be added ASAP.
@@ -435,5 +436,38 @@ int maxProfitFromSellingWine(vector<int> wines,int i,int j,int y){
     int op2 = wines[j] * y + maxProfitFromSellingWine(wines, i, j - 1, y + 1);
 
     return max(op1, op2);
+}
+
+// 2. Rod Cutting Problem.
+
+/**
+ * @brief https://leetcode.com/discuss/general-discussion/1707239/rod-cutting-dp 
+ * 
+ * Check this out blog for more detail.
+ *
+ * @param prices vector of prices of pieces of the rod.
+ * @return int returns the maximum profit obtained.
+ */
+
+int rod_cutting(vector<int> prices){
+    // The size of prices array
+    int n = prices.size();
+
+    // Creating dp of size n+1
+    int dp[n + 1];
+
+    dp[0] = 0;
+
+    for (int i = 1; i <= n;i++){
+        int ans = INT_MIN;
+        for (int j = 0; j < i;j++){
+            int cut = i + 1;
+            int current_ans = prices[i] + dp[i - cut];
+            ans = max(current_ans, ans);
+        }
+        dp[i] = ans;
+    }
+
+    return dp[n];
 }
 

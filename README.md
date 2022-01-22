@@ -43,6 +43,7 @@ GENERAL:
 Dynamic Programming:
 
 - [Selling Wines Problem](#Selling-Wines-Problem)
+- [Rod Cutting Problem](#Rod-Cutting-Problem)
 
 LinkedList:
 
@@ -180,6 +181,16 @@ The various Functions included are:
     Usage: maxProfitFromSellingWine(vector<int> wines,int i,int j,int y)
 
     Here, y=1 should be given as it will mark the starting the of the year , y will increase as the we iterate through the array.
+
+## Rod Cutting Problem
+    Visit this blog to know more about the problem.
+    
+    https://leetcode.com/discuss/general-discussion/1707239/rod-cutting-dp
+
+    Input: A vector of integer.
+    Output: returns the max profit as int
+
+    Usage: rod_cutting(vector<int> vec); 
 
 
 ## How to use Linked List class
